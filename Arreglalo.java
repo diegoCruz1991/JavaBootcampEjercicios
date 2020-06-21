@@ -1,20 +1,42 @@
-public class Arreglalo {
-	public static void main() {
-		Cuadrado cuadrado = Cuadrado();
+/**
+	Created the day 20/06/2020
+	@Author:Eduardo Avila Carranza
+	Program: Solución para el arreglo.
+*/
 
-		cuadrado.figura.rodar();
+public class Arreglalo {
+
+	public void rodar(){
+		System.out.println("ESTROY RODANDO");
+	}
+	public void iniciar(){
+		System.out.println("Corriendo proceso...");
+	}
+
+	public static void main(String[] args) {
+		Cuadrado cuadrado = new Cuadrado();
+
+		cuadrado.rodar();
+		cuadrado.iniciar();
 	}
 }
 
-class Cuadrado {
+class Cuadrado extends Arreglalo{
 
-	Figura figura;
+private String Formulario;
 
-	public Cuadrado() {
-		iniciar();
+	String figura;
+	String nombre;
+
+	public void Cuadrado() {
+
+		Cuadrado compilar = new Cuadrado();
+		compilar.iniciar("test");
 	}
 
-	private void iniciar() {
-		this.figura.nombre = cuadrado;
+	public void iniciar(String actualizacion) {
+		this.Formulario = actualizacion;
+		this.figura = actualizacion;
+		this.nombre = actualizacion;
 	}
 }
