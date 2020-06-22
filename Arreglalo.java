@@ -1,20 +1,30 @@
 public class Arreglalo {
-	public static void main() {
-		Cuadrado cuadrado = Cuadrado();
-
+	
+	public static void main(String[] args) {
+		Cuadrado cuadrado = new Cuadrado();
 		cuadrado.figura.rodar();
+		System.out.println("Testing by Adriana");
 	}
 }
 
-class Cuadrado {
+class Figura {
 
-	Figura figura;
+	 void rodar() {
 
-	public Cuadrado() {
+	}
+	
+}
+
+class Cuadrado extends Figura {
+
+	Figura figura=new Figura();
+
+	public void Cuadrado() {
 		iniciar();
 	}
 
 	private void iniciar() {
-		this.figura.nombre = cuadrado;
+		Cuadrado cuadrado = new Cuadrado(); 
+		this.figura = cuadrado;
 	}
 }
