@@ -1,20 +1,28 @@
-public class Arreglalo {
-	public static void main() {
-		Cuadrado cuadrado = Cuadrado();
+// Que compile y corra.
+// Debe estar en el repositorio.
 
-		cuadrado.figura.rodar();
+public class Arreglalo {
+	public void rodar() {
+		System.out.println("y estoy rodando!!");
+	}
+	
+	public static void main(String args[]) {
+		Cuadrado cuadrado = new Cuadrado();
+		Circulo circulo = new Circulo();
+
+		cuadrado.iniciar();
+		cuadrado.rodar();
 	}
 }
 
-class Cuadrado {
+class Cuadrado extends Arreglalo {
+	public String figura = "Cuadrado";
 
-	Figura figura;
-
-	public Cuadrado() {
-		iniciar();
+	public void iniciar() {
+		System.out.println("Iniciando con la figura " + figura);
 	}
+}
 
-	private void iniciar() {
-		this.figura.nombre = cuadrado;
-	}
+class Circulo extends Arreglalo {
+	public String figura = "Circulo";
 }
