@@ -1,20 +1,22 @@
 public class Arreglalo {
 	public static void main() {
-		Cuadrado cuadrado = Cuadrado();
-
-		cuadrado.figura.rodar();
+		Figura cuadrado = new Figura();
+		
+		cuadrado.iniciar("cuadrado");
 	}
 }
 
-class Cuadrado {
 
-	Figura figura;
+	/*class Cuadrado {		
+			public void Cuadrado() {
+			iniciar();
+		}
+	}*/
 
-	public Cuadrado() {
-		iniciar();
+	class Figura {
+		String nombre;
+
+		public void iniciar(String cuadrado) {
+			this.nombre = cuadrado;
+		}
 	}
-
-	private void iniciar() {
-		this.figura.nombre = cuadrado;
-	}
-}
