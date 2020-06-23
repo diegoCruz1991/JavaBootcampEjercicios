@@ -15,7 +15,7 @@ public class Ejercicio3 {
 		calculadora.multiplicar(m, n); //Hacer que el metodo multiplicar() de calculadora me traiga la multiplicacion de 2 numeros flotantes
 		CalculadoraLogica calculadoraLogica = new CalculadoraLogica(); //Creo la variable calculadoraLogica de tipo CalculadoraLogica
 		System.out.println("Are the two numbers equal?: " + calculadoraLogica.esIgual(numA, numB)); //Imprimo el resultado de la comparacion que obtengo al enviar dos variables numA y NumB
-		boolean esIgual = calculadoraLogica.esIgual(5 / 5 + 4 - 3 * 7 + 10, 18); // Guarda en la variable "esIgual" el resultado de mi comparación
+		boolean esIgual = calculadoraLogica.esIgual(((5/5)+((4-3)*7))+10, 18); // Guarda en la variable "esIgual" el resultado de mi comparación
 		System.out.println("Are the two numbers, provided by Diego, equal?: " + esIgual); //Imprimo el valor de "esIgual"
 		/*
 		*	Primero, crear el metodo esIgual para que compare que 2 numeros son iguales o no 
@@ -48,7 +48,7 @@ class Calculadora{
 }
 
 class CalculadoraLogica{ 
-	boolean esIgual(double numA, double numB){ // uso este metodo para hacer las comparaciones no importando que tan grandes sean los numeros, por eso uso double para cacharlas
+	boolean esIgual(double numA, double numB){ // uso este metodo para hacer las comparaciones 
 		return numA == numB; //regreso el valor boleano de la comparacion entre ambos numeros
 	}	
 }
