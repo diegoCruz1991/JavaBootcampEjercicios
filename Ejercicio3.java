@@ -22,7 +22,7 @@ public class Ejercicio3 {
 
 		CalculadoraLogica calculadoraLogica = new CalculadoraLogica();
 
-		boolean esIgual = calculadoraLogica.esIgual(5 / 5 + 4 - 3 * 7 + 10, 18);
+		boolean esIgual = calculadoraLogica.esIgual(5 / 5 + (4 - 3) * 7 + 10, 18);
 		System.out.println(esIgual);
 		/*
 			Primero, crear el metodo esIgual para que compare que 2 numeros son iguales o no
