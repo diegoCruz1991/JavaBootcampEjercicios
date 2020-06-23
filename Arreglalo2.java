@@ -1,8 +1,9 @@
 public class Arreglalo2 {
-	public static Persona persona;
+	public Persona persona;
 
 	public static void main(String... args) {
-		persona = new Persona();
+		Arreglalo2 arreglalo2 = new Arreglalo2();
+		arreglalo2.persona = new Persona();
 		Calculadora calculadora = persona.getCalculadora();
 
 		int resultadoSuma = calculadora.sumar(10, 5);
