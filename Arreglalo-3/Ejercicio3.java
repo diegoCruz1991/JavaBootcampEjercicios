@@ -16,7 +16,7 @@ public class Ejercicio3 {
 
 		CalculadoraLogica calculadoraLogica = new CalculadoraLogica();
 
-		boolean esIgual = calculadoraLogica.esIgual(5 / 5 + 4 - 3 * 7 + 10, 18);
+		boolean esIgual = calculadoraLogica.esIgual(((5/5)+((4-3)*7))+10, 18);
 		System.out.println(esIgual);
 		/*
 			Primero, crear el metodo esIgual para que compare que 2 numeros son iguale so no
@@ -40,16 +40,16 @@ public class Ejercicio3 {
 
 }
 
-class CalculadoraLogica extends Ejercicio3{
+class CalculadoraLogica{
 
 	public boolean esIgual(float a, float b){
-		return a != b;
+		return a == b;
 	}
 
 
 }
 
-class Calculadora extends CalculadoraLogica{
+class Calculadora{
 
 	public int suma(int a, int b) {
 		return a + b;
