@@ -2,20 +2,21 @@ public class Arreglalo2 {
 	public Persona persona;
 
 	public static void main(String... args) {
-		Calculadora calculadora = persona.getCalculadora();
+		Calculadora calculadora = new Calculadora();
+		
+		int resultadoSuma = calculadora.sumar(10, 5);
 
-		short resultadoSuma = calculadora.sumar('10', 5);
+		System.out.println(resultadoSuma);
 
-		System.out.println(resultado);
+		float resultadoDividir = calculadora.dividir(5.5f, 4.0f);
 
-		short resultadoDividir = calculadora.dividir(5.5f, 4.0f);
-
-		System.out.println(resultado);
+		System.out.println(resultadoDividir);
 	}
 }
 
 class Persona {
 	private Calculadora calculadora;
+	
 
 	Persona() {
 		this.calculadora = new Calculadora();
@@ -32,7 +33,7 @@ class Calculadora {
 		return a + b;
 	}
 
-	public float dividir(double numero1, double numero2) {
+	public float dividir(float numero1, float numero2) {
 		return numero1 / numero2;
 	}
 }
