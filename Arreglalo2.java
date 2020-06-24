@@ -1,25 +1,27 @@
 public class Arreglalo2 {
+	
 	public Persona persona;
 
-	public static void main(String... args) {
+	public static void main(String[] args) {
+		
 		Arreglalo2 arreglalo2 = new Arreglalo2();
-
+		
 		arreglalo2.persona = new Persona();
-
+		
 		Calculadora calculadora = arreglalo2.persona.getCalculadora();
-
+		
 		int resultadoSuma = calculadora.sumar(10, 5);
-
+		
 		System.out.println(resultadoSuma);
 
-		float resultadoDividir = calculadora.dividir(5.5f, 4.0f);
+		 double resultadoDividir = calculadora.dividir(5.5f, 4.0f);
 
 		System.out.println(resultadoDividir);
 	}
 }
 
 class Persona {
-	private Calculadora calculadora;
+	Calculadora calculadora;
 
 	Persona() {
 		this.calculadora = new Calculadora();
@@ -36,8 +38,7 @@ class Calculadora {
 		return a + b;
 	}
 
-	public float dividir(float numero1, float numero2) {
+	public double dividir(double numero1, double numero2) {
 		return numero1 / numero2;
 	}
 }
-
