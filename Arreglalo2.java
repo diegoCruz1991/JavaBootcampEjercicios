@@ -3,8 +3,10 @@ public class Arreglalo2 {
 
 	public static void main(String... args) {
 		Arreglalo2 arreglalo2 = new Arreglalo2();
+
 		arreglalo2.persona = new Persona();
-		Calculadora calculadora = persona.getCalculadora();
+
+		Calculadora calculadora = arreglalo2.persona.getCalculadora();
 
 		int resultadoSuma = calculadora.sumar(10, 5);
 
