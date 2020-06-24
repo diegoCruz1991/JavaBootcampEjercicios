@@ -1,31 +1,32 @@
 public class Arreglalo {
-	public static void main(String... args) {
+	
+	public static void main(String[] args) {
+		
 		Cuadrado cuadrado = new Cuadrado();
+		System.out.println("Mi nombre es: "+cuadrado.nombre);
 
-		cuadrado.figura.rodar();
+		cuadrado.rodar();
 	}
 }
 
-class Cuadrado {
 
-	Figura figura;
+class Figura {
+	
+	String nombre;
+}
+
+
+class Cuadrado extends Figura {
 
 	public Cuadrado() {
 		iniciar();
 	}
 
-	private void iniciar() {
-		this.figura = new Figura();
-		this.figura.nombre = "cuadrado";
+	public void iniciar() {
+		this.nombre = "cuadrado";
 	}
-}
-
-class Figura {
-
-	String nombre;
-
+	
 	public void rodar() {
-		System.out.println("Estoy rodando...");
+		System.out.println("Un cuadrado rodando ...");
 	}
-
 }
