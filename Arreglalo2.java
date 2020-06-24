@@ -37,3 +37,18 @@ class Calculadora {
 		return numero1 / numero2;
 	}
 }
+
+/**
+ * Git steps to upload to remote branch
+ * 1 - git add Arreglalo2.java
+ * 2 - git commit -m "Arreglalo 2 terminado"
+ * 3 - git push -u origin LuisAntonio_branch
+ */
+
+/**
+ * Git steps to pull latest changes from master
+ * 1 - git checkout master  
+ * 2 - git pull origin master 
+ * 3 - git checkout LuisAntonio_branch
+ * 4 - git merge master
+ */
