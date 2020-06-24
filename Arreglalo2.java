@@ -3,17 +3,19 @@ public class Arreglalo2 {
 
 	public static void main(String... args) {
 		Arreglalo2 arreglalo2 = new Arreglalo2();
+
 		arreglalo2.persona = new Persona();
-		
+
 		Calculadora calculadora = arreglalo2.persona.getCalculadora();
 
 		int resultadoSuma = calculadora.sumar(10, 5);
 
-		System.out.println("resultadosuma");
+		System.out.println(resultadoSuma);
 
 		float resultadoDividir = calculadora.dividir(5.5f, 4.0f);
 
-		System.out.println("resultadoDividir");
+		System.out.println(resultadoDividir);
+
 	}
 }
 
@@ -39,3 +41,4 @@ class Calculadora {
 		return numero1 / numero2;
 	}
 }
+

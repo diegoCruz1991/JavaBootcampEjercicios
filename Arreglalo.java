@@ -1,5 +1,8 @@
 public class Arreglalo {
-	public static void main() {
+
+	//TO-DO Revisar siguiente línea
+	public static void main(String... args) {
+
 		Cuadrado cuadrado = new Cuadrado();
 
 		cuadrado.figura.rodar();
@@ -20,6 +23,19 @@ class Cuadrado {
 	}
 
 	private void iniciar() {
+
+		this.figura = new Figura();
+		
 		this.figura.nombre = "cuadrado";
 	}
+}
+
+class Figura {
+
+	String nombre;
+
+	public void rodar() {
+		System.out.println("Estoy rodando...");
+	}
+
 }
