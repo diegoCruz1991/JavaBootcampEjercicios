@@ -3,19 +3,20 @@ public class Arreglalo {
 		Cuadrado cuadrado = new Cuadrado();
 
 		cuadrado.figura.rodar();
+
 	}
 }
 
 class Cuadrado {
 
-	Figura figura;
+	Figura figura = new Figura();
 
-	public Cuadrado() {
+	public void Cuadrado() {
 		iniciar();
 	}
 
 	private void iniciar() {
-		this.figura = new Figura();
+		//figura.rodar;
 		this.figura.nombre = "cuadrado";
 	}
 }
