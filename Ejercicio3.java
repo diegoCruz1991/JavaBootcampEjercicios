@@ -1,11 +1,27 @@
 public class Ejercicio3 {
 
 	public static void main(String... args) {
+		int num1 = 2;
+		int num2 = 5;
+		double num3 = 1.849223d;
+		double num4 = 4.18398321d;
+		float num5 = 2.8717f;
+		float num6 = 3.3187f;
+
 		Calculadora calculadora = new Calculadora();
 		//Hacer que el metodo sumar() de calculadora me traiga la suma de 2 numeros enteros
+		int suma = calculadora.sumar(num1, num2);
+		System.out.println("Resultado de sumar: " + suma);
 		//Hacer que el metodo restar() de calculadora me traiga la suma de 2 numeros enteros
+		int resta = calculadora.restar(num1, num2);
+		System.out.println("Resultado de restar: " +resta);
 		//Hacer que el metodo dividir() de calculadora me traiga la division de 2 numeros double
+		double division = calculadora.dividir(num3, num4);
+		System.out.println("Resultado de dividir: " +division);
 		//Hacer que el metodo multiplicar() de calculadora me traiga la multiplicacion de 2 numeros flotantes
+		float multiplicacion = calculadora.multiplicar(num5, num6);
+		System.out.println("Resultado de multiplicar: " +multiplicacion);
+
 		CalculadoraLogica calculadoraLogica = new CalculadoraLogica();
 
 		boolean esIgual = calculadoraLogica.esIgual(5 / 5 + 4 - 3 * 7 + 10, 18);
