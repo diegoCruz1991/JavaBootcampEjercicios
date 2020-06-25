@@ -64,16 +64,20 @@ public class Fecha{
 			}
 			System.out.println("Fecha no valida");
 			return false;
-		}else if(month == 2){
-			if(day <= 28){
-				System.out.println("mes 2");
-				this.year = year;
-				this.month = month;
-				this.day= day;
-				return true;
-			}
-			System.out.println("Fecha no valida");
-			return false;
+		}else if(month == 2 && (day <= 29) && (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+			System.out.println("Anio bisiesto");
+			System.out.println("mes 2");
+			this.year = year;
+			this.month = month;
+			this.day= day;
+			return true;
+		}else if(month == 2 && (day <= 28) && (year % 4 != 0)){
+			System.out.println("Anio no bisisto");
+			System.out.println("mes 2");
+			this.year = year;
+			this.month = month;
+			this.day= day;
+			return true;
 		}
 			System.out.println("Fecha no valida");
 			return false;
