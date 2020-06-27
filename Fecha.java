@@ -9,7 +9,7 @@ public class Fecha {
 	public static void main(String[] args) {
 		Fecha fecha = new Fecha();
 		fecha.setAnio(2020);
-		fecha.setMes(8);
+		fecha.setMes(80);
 		fecha.setDia(20);
 		System.out.println(fecha.getFecha()); //returns string
 	}
@@ -22,6 +22,7 @@ public class Fecha {
 			this.anio=anio;
 			return true;
 		}
+		System.out.println("El año no es valido");
 		return false;
 	}
 
@@ -42,7 +43,11 @@ public class Fecha {
 	public boolean setDia(int dia){
 		LocalDate date = null;
 		try {
-			date = LocalDate.of(getAnio(), getMes(), 1);	
+			date = LocalDate.of(getAnio(), getMes(), 1);
+			if (dia <= date.lengthOfMonth()){
+				this.dia=dia;
+				return true;
+			}	
 		} catch(Exception e){
 			if (getMes() == 0){
 				System.out.println("El mes no es valido");
@@ -50,10 +55,10 @@ public class Fecha {
 				System.out.println("El año no es valido");
 			}	
 		} 
-		if (dia <= date.lengthOfMonth()){
+		/*if (dia <= date.lengthOfMonth()){
 			this.dia=dia;
 			return true;
-		}
+		}*/
 		return false;
 		
 	}
