@@ -5,6 +5,7 @@ public class Ejercicio3 {
 		Calculadora calculadora = new Calculadora();
 		//Hacer que el metodo sumar() de calculadora me traiga la suma de 2 numeros enteros
 		System.out.println(calculadora.sumar(2.3, 5, 10, 20, 30, 100.5));
+		System.out.println(calculadora.sumar(2.3, 5, 10, 20));
 		//Hacer que el metodo restar() de calculadora me traiga la suma de 2 numeros enteros
 		System.out.println(calculadora.restar(10,5));
 		//Hacer que el metodo dividir() de calculadora me traiga la division de 2 numeros double
