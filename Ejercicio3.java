@@ -7,7 +7,7 @@ public class Ejercicio3 {
 		//Hacer que el metodo dividir() de calculadora me traiga la division de 2 numeros double
 		//Hacer que el metodo multiplicar() de calculadora me traiga la multiplicacion de 2 numeros flotantes
 
-		double resultadoSuma = calculadora.sumar(3, 4.3);
+		double resultadoSuma = calculadora.sumar(3, 4,3);
 		System.out.println(resultadoSuma);
 
 		double resultadoResta = calculadora.restar(4, 1.4);
@@ -37,6 +37,20 @@ class Calculadora{
 	public static double sumar(double a, double b) {
 		return a + b;
 	}
+
+	public static double sumar(double... a){
+		if(a.length <= 1){
+			System.out.println("Debes agregar 2 o más números");
+			return -1;
+		}
+			double suma=0;
+			for(int i=0;i <a.length;i++){
+				suma +=a[i];
+			
+		}
+		return suma;
+	}
+
 	public static double restar(double a, double b) {
 		return a - b;
 	}
