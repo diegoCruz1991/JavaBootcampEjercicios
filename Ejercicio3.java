@@ -10,17 +10,13 @@ public class Ejercicio3 {
 
 		Calculadora calculadora = new Calculadora();
 		//Hacer que el metodo sumar() de calculadora me traiga la suma de 2 numeros enteros
-		int suma = calculadora.sumar(num1, num2);
-		System.out.println("Resultado de sumar: " + suma);
+		System.out.println("Resultado de sumar: " + calculadora.sumar(1, 2, 3.5, 4));
 		//Hacer que el metodo restar() de calculadora me traiga la suma de 2 numeros enteros
-		int resta = calculadora.restar(num1, num2);
-		System.out.println("Resultado de restar: " +resta);
+		System.out.println("Resultado de restar: " + calculadora.restar(100, 8.5, 32.48, 10));
 		//Hacer que el metodo dividir() de calculadora me traiga la division de 2 numeros double
-		double division = calculadora.dividir(num3, num4);
-		System.out.println("Resultado de dividir: " +division);
+		System.out.println("Resultado de dividir: " + calculadora.dividir(1000, 4));
 		//Hacer que el metodo multiplicar() de calculadora me traiga la multiplicacion de 2 numeros flotantes
-		float multiplicacion = calculadora.multiplicar(num5, num6);
-		System.out.println("Resultado de multiplicar: " +multiplicacion);
+		System.out.println("Resultado de multiplicar: " + calculadora.multiplicar(150, 4.55));
 
 		CalculadoraLogica calculadoraLogica = new CalculadoraLogica();
 
@@ -34,17 +30,83 @@ public class Ejercicio3 {
 }
 
 class Calculadora {
-
-		public int sumar(int numero1, int numero2) {
+		public static int sumar(int numero1, int numero2) {
 			return numero1 + numero2;
 		}
-		public int restar(int numero1, int numero2) {
+
+		public static double sumar(double numero1, double numero2) {
+			return numero1 + numero2;
+		}
+
+		public static float sumar(float numero1, float numero2) {
+			return numero1 + numero2;
+		}
+
+		public static double sumar(double numero1, double... numeros) {
+			double sumatoria = numero1;
+			for (int index = 0; index < numeros.length; index++){
+				sumatoria += numeros[index];
+			}
+			return sumatoria;
+		}
+
+		public static int sumar(int numero1, int... numeros) {
+			int sumatoria = numero1;
+			for (int index = 0; index < numeros.length; index++){
+				sumatoria += numeros[index];
+			}
+			return sumatoria;
+		}
+
+		public static int restar(int numero1, int numero2) {
 			return numero1 - numero2;
 		}
-		public double dividir(double numero1, double numero2) {
+
+		public static double restar(double numero1, double numero2) {
+			return numero1 - numero2;
+		}
+
+		public static double restar(double numero1, double... numeros) {
+			double restoria = numero1;
+			for (int index = 0; index < numeros.length; index++){
+				restoria -= numeros[index];
+			}
+			return restoria;
+		}
+
+		public static int restar(int numero1, int... numeros) {
+			int restoria = numero1;
+			for (int index = 0; index < numeros.length; index++){
+				restoria -= numeros[index];
+			}
+			return restoria;
+		}
+
+		public static double dividir(double numero1, double numero2) {
 			return numero1 / numero2;
 		}
-		public float multiplicar(float numero1, float numero2) {
+
+		public static float dividir(float numero1, float numero2) {
+			return numero1 / numero2;
+		}
+
+		public static double dividir(int numero1, int numero2) {
+			return numero1 / numero2;
+		}
+
+		public static int multiplicar(int numero1, int numero2) {
+			return numero1 * numero2;
+		}
+
+		public static float multiplicar(float numero1, float numero2) {
+			return numero1 * numero2;
+		}
+
+		public static double multiplicar(double numero1, double numero2) {
+			return numero1 * numero2;
+		}
+
+		public static long multiplicar(long numero1, long numero2) {
 			return numero1 * numero2;
 		}
 }
