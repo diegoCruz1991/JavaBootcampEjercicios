@@ -6,11 +6,10 @@ public class Fecha {
 
   public static void main(String[] args) {
     Fecha fecha = new Fecha();
-    System.out.println("" + fecha.setDia(29));
-    System.out.println("" + fecha.setMes(02));
-    System.out.println("" + fecha.setAnio(2016));
-
-    System.out.println(fecha.getFecha());
+    if (fecha.setDia(31) && fecha.setMes(12) && fecha.setAnio(2020))
+      System.out.println(fecha.getFecha());
+    else
+      System.out.println("Fecha no valida");
   }
 
   public boolean setDia(int dia) {
