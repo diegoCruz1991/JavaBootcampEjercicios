@@ -44,6 +44,10 @@ public class Fecha{
 
 	public String getFecha() {
 		//System.out.println("get fecha");
+		if(this.day == 0){
+			System.out.println("Ingrese otra fecha valida");
+			return "-";
+		}
 		return this.day + "/" + this.month + "/" + this.year;
 	}
 	public boolean setFecha(int day, int month, int year) {
@@ -79,6 +83,9 @@ public class Fecha{
 			this.day= day;
 			return true;
 		}
+			this.year = 0;
+			this.month = 0;
+			this.day = 0;
 			System.out.println("Fecha no valida");
 			return false;
 	}
