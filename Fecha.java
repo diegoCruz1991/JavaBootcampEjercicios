@@ -9,7 +9,7 @@ public class Fecha {
 	public static void main(String[] args) {
 		Fecha fecha = new Fecha();
 		fecha.setAnio(2020);
-		fecha.setMes(80);
+		fecha.setMes(8);
 		fecha.setDia(20);
 		System.out.println(fecha.getFecha()); //returns string
 	}
