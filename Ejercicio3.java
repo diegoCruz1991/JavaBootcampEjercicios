@@ -7,16 +7,16 @@ public class Ejercicio3 {
 		//Hacer que el metodo dividir() de calculadora me traiga la division de 2 numeros double
 		//Hacer que el metodo multiplicar() de calculadora me traiga la multiplicacion de 2 numeros flotantes
 
-		int resultadoSuma = calculadora.sumar(3, 4);
+		double resultadoSuma = calculadora.sumar(3, 4.3);
 		System.out.println(resultadoSuma);
 
-		int resultadoResta = calculadora.restar(5, 9);
+		double resultadoResta = calculadora.restar(4, 1.4);
 		System.out.println(resultadoResta);
 
-		double resultadoDividir = calculadora.dividir(3123, 123412);
+		double resultadoDividir = calculadora.dividir(30.1, 1.9);
 		System.out.println(resultadoDividir);
 
-		double resultadoMultiplicar = calculadora.multiplicar(31.12f, 12.32f);
+		double resultadoMultiplicar = calculadora.multiplicar(40, 2.5);
 		System.out.println(resultadoMultiplicar);
 
 
@@ -33,16 +33,17 @@ public class Ejercicio3 {
 }
 
 class Calculadora{
-	public int sumar(int a, int b) {
+
+	public static double sumar(double a, double b) {
 		return a + b;
 	}
-	public int restar(int a, int b) {
+	public static double restar(double a, double b) {
 		return a - b;
 	}
-	public double dividir(double a, double b) {
+	public static double dividir(double a, double b) {
 		return a / b;
 	}
-	public float multiplicar(float a, float b) {
+	public static double multiplicar(double a, double b) {
 		return a * b;
 	}
 }
