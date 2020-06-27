@@ -1,7 +1,7 @@
 /**
 	CREATED THE DAY 26/06/2020
 	@Author: Eduardo Avila Carranza.
-	Program: FORMATO FECHA 
+	Program: FORMATO FECHA. 
 */
 
 public class Datos_de_entrada{
