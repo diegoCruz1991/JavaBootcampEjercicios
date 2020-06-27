@@ -23,9 +23,9 @@ public class Ejercicio3 {
 		//float resultado4 = calculadora.multiplicar(1.5f, 5.5f);
 		//System.out.println(resultado4);
 
-		System.out.println(calculadora.sumar(2.3, 5));
-		System.out.println(calculadora.sumar(3, 5.5));
-		System.out.println(calculadora.sumar(3.5, 5.5));
+		calculadora.sumar(2.3, 5);
+		calculadora.sumar(3, 5.5);
+		calculadora.sumar(3.5, 5.5);
 		calculadora.sumar(2.3, 5, 10, 20);
 		calculadora.sumar(2.3);
 
@@ -60,18 +60,22 @@ public class Ejercicio3 {
 		}
 
 		public static int sumar(int a, int b) {
+			System.out.println(a + b);
 			return a + b;
 		}
 
 		public static double sumar(double a, int b) {
+			System.out.println(a + b);
 			return a + b;
 		}
 
 		public static double sumar(int a, double b) {
+			System.out.println(a + b);
 			return a + b;
 		}
 
 		public static double sumar(double a, double b) {
+			System.out.println(a + b);
 			return a + b;
 		}
 
