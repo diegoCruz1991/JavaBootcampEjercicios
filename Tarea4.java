@@ -16,7 +16,7 @@ public class Tarea4{
 		app1.setAnio(2010);
 		app3.setMes(2);
 		app2.setDia(29);
-		app4.setFecha();
+		app4.getFecha();
 	}
 }
 
