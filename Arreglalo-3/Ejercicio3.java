@@ -52,19 +52,19 @@ class CalculadoraLogica{
 
 class Calculadora{
 
-	public int suma(int a, int b) {
+	public static int suma(int a, int b) {
 		return a + b;
 	}
 
-	public int resta(int a, int b) {
+	public static int resta(int a, int b) {
 		return a - b;
 	}
 
-	public double division(double a, double b) {
+	public static double division(double a, double b) {
 		return a / b;
 	}
 
-	public float multiplicacion(float a, float b) {
+	public static float multiplicacion(float a, float b) {
 		return a * b;
 	}
 }
