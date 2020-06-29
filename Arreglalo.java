@@ -3,7 +3,7 @@ public class Arreglalo {
 	public static void main(String... args) {
 	
 		Cuadrado cuadrado = new Cuadrado();
- 		System.out.println("Esto es un "+ cuadrado.figura);
+ 		
 	
 	}
 }
@@ -11,13 +11,23 @@ public class Arreglalo {
 
 class Cuadrado {
 		
-	String figura;
+	Figura figura;
 
 	public Cuadrado() {
 		iniciar();
 	}
 
 	private void  iniciar() {
-		this.figura = "Cuadrado";
+		this.figura=new Figura();
+
+		this.figura.nombre = "cuadrado";
+	}
+}
+
+class Figura {
+	String nombre;
+	public void rodar(){
+		System.out.println("Estoy rodando ");
+
 	}
 }
