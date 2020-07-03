@@ -21,7 +21,7 @@ public class Ciclos{
   public void numeroMultiplicado() {
     int veces = 0;
       for (int i = 1; i < this.arreglo2.length - 1; i++){
-        if ((arreglo2[i] == (arreglo2[i-1] * 2)) && (arreglo2[i+1] == (arreglo2[i] * 2))){
+        if (arreglo2[i] == (arreglo2[i-1] * 2)){
             veces++;
         }
       }
