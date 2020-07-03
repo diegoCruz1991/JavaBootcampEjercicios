@@ -6,10 +6,9 @@ public class Fecha {
 
   public static void main(String[] args) {
     Fecha fecha = new Fecha();
-    if (fecha.setDia(31) && fecha.setMes(12) && fecha.setAnio(2020))
+    if (fecha.setDia(31) && fecha.setMes(12) && fecha.setAnio(2020)){
       System.out.println(fecha.getFecha());
-    else
-      System.out.println("Fecha no valida");
+    }
   }
 
   public boolean setDia(int dia) {
@@ -32,7 +31,7 @@ public class Fecha {
 
   public boolean setAnio(int anio) {
     if (anio < 1){
-      System.out.println("Anio no valido");
+      System.out.println("Año no valido");
       return false;
     }
     if ((anio % 4 == 0) && ((anio % 100 != 0) || (anio % 400 == 0))){
@@ -43,12 +42,13 @@ public class Fecha {
   }
 
   public String getFecha() {
-    if ((this.mes == 2 && this.esBisiesto && this.dia > 29) ||
-      (this.mes == 2 && this.dia > 28 && !this.esBisiesto) ||
-      ((this.mes == 4 || this.mes == 6 || this.mes == 9 || this.mes == 11) && this.dia > 30))
+    if ((this.mes == 2 && this.esBisiesto && this.dia > 29)
+    || (this.mes == 2 && this.dia > 28 && !this.esBisiesto)
+    || ((this.mes == 4 || this.mes == 6 || this.mes == 9 || this.mes == 11) && this.dia > 30)){
       return "Fecha no valida";
-    else
-  	 return this.dia + "/" + this.mes + "/" + this.anio;
+    } else {
+      return this.dia + "/" + this.mes + "/" + this.anio;
+   }
   }
 
 }
