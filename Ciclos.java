@@ -20,7 +20,7 @@ public class Ciclos{
 
   public void numeroMultiplicado() {
     int veces = 0;
-      for (int i = 1; i < this.arreglo2.length - 1; i++){
+      for (int i = 1; i < this.arreglo2.length; i++){
         if (arreglo2[i] == (arreglo2[i-1] * 2)){
             veces++;
         }
