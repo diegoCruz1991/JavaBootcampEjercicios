@@ -5,7 +5,7 @@ public class Strings_Ejercicio7 {
   }
   //Hay un bug, no esta guardando el segundo apellido
 	public static Empleado obtenerEmpleado(String registro) { //Recibe un String que es el registro a procesar
-	   String cadenaLimpia = borrarEspacios(registro) + "|"; //Limpiar la cadena de espacios
+	   String cadenaLimpia = borrarEspacios(registro) + "|"; //Limpiar la cadena de espacios **aqui agrega un pipe al final
 
 		String temporal = ""; // Cadena para ir almacenando cada uno de los nombres del registro
 		int pipesContador = 0; //Contador para ir contando los pipes que aparecen en el registro
@@ -15,9 +15,11 @@ public class Strings_Ejercicio7 {
 				pipesContador++; // Si lo es, aumenta el contador de pipes en 1
         /*
          el bug es que cuando encuentra un pipe no hace nada mas que incrementar el contador pipes
-         así que el switch se ejecuta en el primer caracter después del pipes
-         la solución fue ejecutar aquí el switch y en el else acumular la cadena nueva
+         así que el switch se ejecuta o ejecutaría en el primer caracter *después* del pipe.
+         en el caso del último, el for termina antes de entrar al switch por última vez.
          ademas de agregar el último pipe al guardar la cadenaLimpia
+         la solución fue ejecutar aquí el switch y resetear temporal 
+         en el else acumular la cadena nueva
         */
         switch(pipesContador) { // Se procesa el contador de pipes y dependiendo del numero, se asigna a los diferentes atributos
           case 1:
