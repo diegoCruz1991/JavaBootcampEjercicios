@@ -24,18 +24,17 @@ public class Ejercicio7 {
     //guardaremos los campos usando substrings en un arreglo de strings
     String[] campoEmpleado = new String[4];
     // usamos el pipeindex para crear los substrings
-    int pipeIndex = 0;
-	  String cadenaLimpia ="|" + borrarEspacios(registro) + "|"; //Limpiar la cadena de espacios
-    //**aqui agrega un pipe al final y al inicio para que todos los campos sean iguales
+    int inicioCampo = 0;
+	  String cadenaLimpia = borrarEspacios(registro) + "|"; //Limpiar la cadena de espacios
+    //**aqui agrega un pipe al final
     // cuenta el número de pipes que tiene la cadena y guarda los substrigs en el arreglo
     int numPipes = 0;
-    //se recorre la cadena ignorando el primer pipe
-    for (int i = 1; i < cadenaLimpia.length(); i++) {
+    for (int i = 0; i < cadenaLimpia.length(); i++) {
       if (cadenaLimpia.charAt(i) == '|') {
-        //corta la cadena desde el ultimo pipe hasta el indice actual
-        campoEmpleado[numPipes] = cadenaLimpia.substring(pipeIndex+1,i);
-        //el indice actual es el nuevo indice de pipe
-        pipeIndex = i;
+        //corta la cadena desde el inicioCampo hasta el indice actual
+        campoEmpleado[numPipes] = cadenaLimpia.substring(inicioCampo,i);
+        // el inicioCampo será ahora el siguiente indice para ignorar el pipe
+        inicioCampo = i+1;
         //se cuenta el pipe en el contador
         numPipes++;
       }
