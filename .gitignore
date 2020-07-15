@@ -1,0 +1,11 @@
+# MacOS file system
+*.DS_store
+
+# Java classes
+*.class
+
+# InteliJ project
+*.iml
+*/out/
+*/.idea/
+*.html
