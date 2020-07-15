@@ -29,7 +29,7 @@ public class Problema1 {
 
 		soloEmpleados[9] = new Programmer();
 
-		for (Empleado empleado : soloEmpleados ) {
+		/*for (Empleado empleado : soloEmpleados ) {
 			if (empleado instanceof Programmer) {
 				System.out.println("Me estoy entrenando para ser un " + empleado);
 				becarioPro.recibirTraining(empleado);
@@ -40,7 +40,12 @@ public class Problema1 {
 				System.out.println("Me estoy entrenando para ser un " + empleado);
 				becarioPro.recibirTraining(empleado);
 			}
-		}
+		}*/
+
+		Reclutador nuevoReclutador = (Reclutador)becarioPro.recibirTraining(new Reclutador());
+		Programmer nuevoProgramador = (Programmer)becarioPro.recibirTraining(new Programmer());
+		Manager nuevoQAAut = (Manager)becarioPro.recibirTraining(new Manager());
+
 
 		
 		/*Becario becarioMan = new Manager();
@@ -138,11 +143,11 @@ class Becario extends Externo implements Entrenable {
 		}else if (empleado instanceof Manager) {
 			System.out.println("Recibir training como Becario Manager");
 			return new Manager();	
-		}else if (empleado instanceof QAAutomation) {
-			System.out.println("Recibir training como Becario Automatizador");
-			return new QAAutomation();
+		}else if (empleado instanceof Reclutador) {
+			System.out.println("Recibir training como Becario Reclutador");
+			return new Reclutador();
 		}
-		return new QAAutomation();
+		return empleado;
 	}
 
 	/*
