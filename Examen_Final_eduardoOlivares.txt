@@ -1,0 +1,169 @@
+Examen Final
+1.- Explica en que consiste una clase Abstracta y UN EJEMPLO DE ELLA
+  - Una clase abstracta es la que solo esta definida pero no se crean instancias de ella,
+    Los métodos pueden solo estar declarados pero sus clases hijos estan obligados a
+    implementarlos.
+
+2.- Que tipo de atributos son los que se encuentran en una Interfaz?, ESCRIBE EXACTAMENTE COMO ESTAN DEFINIDOS.
+  - public static final int x = 0;
+    Las interfaces solo permiten constantes estáticas por que van a ser implementadas
+    por varias clases
+
+3.- Cuales son los operadores relacionales en Java? UN EJEMPLO DE CADA UNO
+    Los peradores relacioales comparan dos datos primitivos y regresan true o false, si se cumple la relación o no.
+    mayor que (5 > 3) regresa true
+    menor que (5 < 3) regresa false
+    igual a (5 == 3) regresa false
+    igual o mayor (5 >= 5) regresa true
+    igual o menor (5 <= 5) regreas true
+    diferente (5 != 5) regrea false
+
+4.- Escribe las reglas de la sobrecarga de métodos.
+  - deben tener el mismo identificador de método, pueden regresar un tipo diferente pero deben diferir
+    en el número y orden de parámetros
+
+5.- Escribe las diferencias entre super y this y UN EJEMPLO DE CADA UNO.
+  - super manda llamar al método o atributo de la clase padre, y this llama al método
+    o atributo de la clase actual
+
+    public class Animal{
+      protected int edad;
+      public void hacerRuido(){
+        roar();
+      }
+    }
+
+    public class Perro {
+      private int velocidad;
+      @Override
+      public void hacerRuido(){
+        estoyLadrando();
+      }
+      public void correr(int velocidad){
+        perroRun();
+        this.velocidad = velocidad; //usigna la variable del parametro a la variable de la clase
+        super.hacerRuido();  //utiliza el método del padre y no el sobreescrito por la clase
+      }
+    }
+
+6.- Dado al siguiente código, en que linea ocurre PRIMERO un error de compilación? Y agrega una explicación de tu respuesta.
+
+1 public class A {
+2
+3	public static void main(String... args) {
+4		String resultado = miMetodo();
+5
+6		System.out.println(resultado);
+7	}
+8
+9	public static String miMetodo() {
+10		return 0;
+11	}
+12 }
+
+10 - Aquí porque intenta regresar un 10 en un método String antes de asignarlo a resultado
+6
+4
+1
+
+
+7. Dado al siguiente código, indica la respuesta correcta y EXPLICA TU RESPUESTA
+
+public class A {
+
+	public static void main(String... args) {
+		B b = new B();
+
+		C c = new C();
+
+		A a = c;
+
+		a = b;
+
+		a = new A();
+
+		a = b;
+	}
+
+}
+
+class B extends A {
+
+}
+
+class C extends A {
+
+}
+
+Compila y Corre e imprime algo
+Compila pero no corre
+No compila
+Compila y Corre pero no imprime nada - Usa casteo implicito y no hay errores, tampoco funciones para imprimir
+
+
+8.- Dado el siguiente código, elige la respuesta correcta basado en lo que imprime el System.out.println(a);
+
+public class A {
+
+	public static void main(String... args) {
+
+		int index = 10;
+		int a = 2;
+              20       10          14         24
+		for(int index1 = index + 10; index < 15; index1++) {
+			a = a * index1; //40 // 840 //18480 //425040 // 10200960
+
+			if (a == 12) {
+				break;
+			} else {
+				index = index + 1; // 11 //12 // 13 //14 // 15
+			}
+		}
+
+		System.out.println(a);
+	}
+
+}
+
+10200960 <-- este cuando index llega a 15 sale del ciclo
+10200660
+10280
+102009800
+
+9.- Escribe una función que me regrese cuantos números pares únicos existen en un arreglo de números, ejemplo,
+[1, 10, 11, 14, 23, 30, 10, 2, 45, 100] -> tiene que regresar 5
+[1, 12, 11, 12, 23, 30, 12, 2, 45, 120] -> tiene que regresar 4
+
+public void paresUnicos(int[] arregloNumeros){
+int[] arregloPares = new int[arregloNumeros.length];
+int x = 0;
+contadorPares = 0;
+for (int i = 0; arregloNumeros.length; i++) {
+      if (arregloNumeros[i] % 2 == 0) {
+        arregloPares[x] = arregloNumeros[i];
+        contadorPares++;
+        x++;
+      }
+  }
+  System.out.println(contadorPares);
+}
+
+10.- Dada la siguiente clase, sobreescribe el método equals() para que me diga si 2 estudiantes son iguales o no basándonos en los atributos.
+
+public class Estudiante {
+
+	private String name;
+	private String birthday;
+	private String cellPhone;
+  @Override
+  public void equals(Object est1, Object est2) {
+    if (est1 instancof Estudiante && est2 instanceof Estudiante) {
+      if (est1.birthday == est1.birthday && est1.cellphone == est1.cellphone && est1.name == est1.name){
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+}
