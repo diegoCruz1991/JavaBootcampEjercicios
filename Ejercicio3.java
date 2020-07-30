@@ -23,12 +23,12 @@ public class Ejercicio3 {
 		//float resultado4 = calculadora.multiplicar(1.5f, 5.5f);
 		//System.out.println(resultado4);
 
-		calculadora.sumar(2.3, 5);
+	/*	calculadora.sumar(2.3, 5);
 		calculadora.sumar(3, 5.5);
 		calculadora.sumar(3.5, 5.5);
 		calculadora.sumar(2.3, 5, 10, 20);
 		calculadora.sumar(2.3);
-
+*/
 		// calculadora sumar o restar mas de dos numeros.
 
 		/*
@@ -48,7 +48,7 @@ public class Ejercicio3 {
 		}
 	}
 
-	class Calculadora {
+	/*class Calculadora {
 
 		public double sumar(double... muchosNumeros) {
 			double total = 0;
@@ -90,4 +90,4 @@ public class Ejercicio3 {
 		public static float multiplicar(float x, float y) {
 			return x * y;
 		}
-	}
+	}*/

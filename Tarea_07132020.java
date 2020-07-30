@@ -20,7 +20,7 @@ public class Tarea_07132020 {
 
         for(int i = 0; i < matriz.length-1; i++) {
             System.out.println("-----------------------------");
-            for(int j = 0; j < matriz.length-1; j++) {
+            for(int j = 0; j < matriz[i].length-1; j++) {
                 if(i == 0 && j==0) {
                     matriz[i][j] = 1;
                 }
