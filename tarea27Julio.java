@@ -14,12 +14,16 @@ public class tarea27Julio {
         System.out.println("Esta es la cadena en reversa: " + Espejo(cadena));
         System.out.println("Esta es la cadena sin espacios: " + RemoverEspacios(cadena));
         System.out.println("Contiene: " + CuentaVocales(cadena) + " vocales");
-        AssertionsReverse(cadena);
-        AssertionsSinEspacios(cadena);
-        AssertionsCuentaVocales(cadena);
-        NegativeAssertionsReverse(cadena);
-        NegativeAssertionsSinEspacios(cadena);
-        NegativeAssertionsCuentaVocales(cadena);
+        AssertionsReverse();
+        AssertionsSinEspacios();
+        AssertionsCuentaVocales();
+        AssertionsAmitad();;
+
+
+        NegativeAssertionsReverse();
+        NegativeAssertionsSinEspacios();
+        NegativeAssertionsCuentaVocales();
+        NegativeAssertionsAmitad();
     }
 
     static List AMitad(String cadena){
@@ -61,7 +65,7 @@ public class tarea27Julio {
         return numVocales;
     }
 
-    static void AssertionsReverse(String cadena){
+    static void AssertionsReverse(){
         try {
             assert Espejo("Hormiga").equals("agimroH");
             System.out.println("Reverse esta Funcionando");
@@ -70,7 +74,7 @@ public class tarea27Julio {
             System.out.println("Reverse no esta funcionando");
         }
     }
-    static void AssertionsSinEspacios(String cadena){
+    static void AssertionsSinEspacios(){
         try {
             assert RemoverEspacios("H o r m i g a").equals("Hormiga");
             System.out.println("Remover espacios esta funcionando");
@@ -79,7 +83,7 @@ public class tarea27Julio {
             System.out.println("Remover espacios no esta funcionando");
         }
     }
-    static void AssertionsCuentaVocales(String cadena){
+    static void AssertionsCuentaVocales(){
         try {
             assert CuentaVocales("Aeroespacial")==7;
             System.out.println("Cuenta Vocales esta funcionando");
@@ -88,7 +92,7 @@ public class tarea27Julio {
             System.out.println("Cuenta Vocales no esta funcionando");
         }
     }
-    static void NegativeAssertionsReverse(String cadena){
+    static void NegativeAssertionsReverse(){
         try {
             assert Espejo("Hormiga").equals("agimro");
             System.out.println("Reverse esta Funcionando");
@@ -97,7 +101,7 @@ public class tarea27Julio {
             System.out.println("Reverse no esta funcionando");
         }
     }
-    static void NegativeAssertionsSinEspacios(String cadena){
+    static void NegativeAssertionsSinEspacios(){
         try {
             assert RemoverEspacios("H o r m i g a").equals("Hormig a");
             System.out.println("Remover espacios esta funcionando");
@@ -106,13 +110,39 @@ public class tarea27Julio {
             System.out.println("Remover espacios no esta funcionando");
         }
     }
-    static void NegativeAssertionsCuentaVocales(String cadena){
+    static void NegativeAssertionsCuentaVocales(){
         try {
             assert CuentaVocales("Casa")==1;
             System.out.println("Cuenta Vocales esta funcionando");
         }
         catch (AssertionError ae){
             System.out.println("Cuenta Vocales no esta funcionando");
+        }
+    }
+    static void AssertionsAmitad(){
+        try {
+            List<String> compareMitad = new ArrayList<>();
+            compareMitad.add("Supe");
+            compareMitad.add("rman");
+            assert AMitad("Superman").equals(compareMitad);
+            System.out.println("Amitad esta funcionando");
+
+        }
+        catch (AssertionError ae){
+            System.out.println("Amitad no esta funcionando");
+        }
+    }
+    static void NegativeAssertionsAmitad(){
+        try {
+            List<String> compareMitad = new ArrayList<>();
+            compareMitad.add("Supe");
+            compareMitad.add("rma");
+            assert AMitad("Superman").equals(compareMitad);
+            System.out.println("Amitad esta funcionando");
+
+        }
+        catch (AssertionError ae){
+            System.out.println("Amitad no esta funcionando");
         }
     }
 }
