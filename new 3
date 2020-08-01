@@ -1,17 +1,23 @@
 public class Ejercicio3 {
 
     public static void main (String[] args) {
-		
-		Calculadora calculadora = new Calculadora();
 
-        Calculadora.sumar = sumar(2 , 3);
-		Calculadora.sumar = sumar(1.7, 3.5, 4.9);
-		Calculadora.sumar = sumar(1.7, 5);
-        Calculadora.restar = restar(3 , 4);
-		Calculadora.restar = restar(10 , 5, 1);
-        Calculadora.multiplicar = multiplicar(1.1 , 2.2);
-		Calculadora.multiplicar = multiplicar(5.5 , 4.3, 3.9);
-        Calculadoradividir = dividir(1.5 , .75);
+        int a = 2;
+        int b = 4;
+        double c = 6.5d;
+        double d = 8.1d;
+        float e = 5.4f;
+        float f = 3.2f;
+
+        int sumar = sumar(a , b);
+        int restar = restar(a , b);
+        float multiplicar = multiplicar(e , f);
+        double dividir = dividir(c , d);
+
+        System.out.println(sumar);
+        System.out.println(restar);
+        System.out.println(multiplicar);
+        System.out.println(dividir);
 
         boolean esIgual = CalculadoraLogica.esIgual(5 / 5 + (4 - 3) * 7 + 10, 18);
 
@@ -23,46 +29,23 @@ public class Ejercicio3 {
         }
     }
 
-    public static int sumar(int a, int b){
+    static int sumar(int a, int b){
         return a + b;
-	
-	}
-	
-	public static double sumar(double a, double b, double c){
-        return a + b + c;
-		
-	}
-	
-	public static double sumar(double a, int b){
-        return a + b;
+
     }
 
-    public static int restar(int a, int b){
+    static int restar(int a, int b){
         return a - b;
-		
-	}	
-	
-	public static int restar(int a, int b, int c){
-        return a - b - c;
-	
-	}
-	
-	public static float restar(float a, float b){
-        return a + b;
-    }
-
-    public static float multiplicar(float a , float b){
-        return a * b;
-	
-	}
-	
-	public static float multiplicar(float a , float b, float c){
-        return a * b * c;
 
     }
 
-    public static double dividir(double a, double b){
-        return a / b;
+    static float multiplicar(float e , float f){
+        return e * f;
+
+    }
+
+    static double dividir(double c, double d){
+        return c / d;
 
     }
 
