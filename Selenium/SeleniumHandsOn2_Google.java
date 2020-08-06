@@ -19,6 +19,7 @@ public class SeleniumHandsOn2_Google {
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
         driver.get("https://www.google.com/");
+        driver.manage().window().maximize();
         assert driver.getCurrentUrl().equals("https://www.google.com/") : "La URL no es la correcta" ;
 
         WebElement googleSearchInput = driver.findElement(By.name("q"));
