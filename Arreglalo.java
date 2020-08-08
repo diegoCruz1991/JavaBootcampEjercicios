@@ -1,19 +1,24 @@
 public class Arreglalo {
 	public static void main(String... args) {
 		Cuadrado cuadrado = new Cuadrado();
+<<<<<<< HEAD
+=======
+		cuadrado.iniciar();
+>>>>>>> 0b2034eb60332ed6bf2a0ac142873d40f4119197
 
-		cuadrado.figura.rodar();
 	}
 }
 
 class Cuadrado {
+			Cuadrado cuadrado;
 
-	Figura figura;
+		public void iniciar() {
+			System.out.println("Estoy iniciando como un Cuadrado");
+			this.cuadrado = cuadrado;
 
-	public Cuadrado() {
-		iniciar();
-	}
+		}
 
+<<<<<<< HEAD
 	private void iniciar() {
 		this.figura = new Figura();
 		this.figura.nombre = "cuadrado";
@@ -29,3 +34,8 @@ class Figura {
 	}
 
 }
+=======
+	}
+
+
+>>>>>>> 0b2034eb60332ed6bf2a0ac142873d40f4119197
