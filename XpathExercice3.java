@@ -28,19 +28,14 @@ public class XpathExercice3 {
         WebElement UltimoHijo = lista.get(lista.size()-1);
         System.out.println("El ID del ultimo hijo es " + UltimoHijo.getAttribute("id"));
 
-        List<WebElement> CualquierElemento = driver.findElements(By.xpath("//*[@role='navigation']"));
-        for(WebElement Nave : CualquierElemento){
-            System.out.println("Cualquier Elemento del rol con atributo  "+Nave.getText());
-        }
+        WebElement CualquierElemento = driver.findElement(By.xpath("//*[@role='navigation']"));
+        System.out.println("Cualquier Elemento del rol con atributo  "+ CualquierElemento.getText());
 
-        List<WebElement> CualquierAtributo = driver.findElements(By.xpath("//*[contains(@class,'nav')]"));
-        for(WebElement Nave : CualquierAtributo){
-            System.out.println("Clase del elemento nav " + Nave.getText());
-        }
+        WebElement CualquierAtributo = driver.findElement(By.xpath("//*[contains(@class,'nav')]"));
+            System.out.println("Clase del elemento nav " + CualquierAtributo.getText());
 
-        List<WebElement> NavInput = driver.findElements(By.xpath("//*[@type='submit' and @class='nav-input']"));
-        for(WebElement CualquierTipo : NavInput){
-            System.out.println("Cualquier clase y Submit del elemento nav input y atributo type: "+CualquierTipo.getText());
-        }
+        WebElement NavInput = driver.findElement(By.xpath("//*[@type='submit' and @class='nav-input']"));
+        System.out.println("Cualquier clase y Submit del elemento nav input y atributo type: "+ NavInput.getText());
+
     }
 }
