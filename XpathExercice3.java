@@ -24,15 +24,14 @@ public class XpathExercice3 {
         WebElement PrimerHijo = driver.findElement(By.xpath("//body/div"));
         System.out.println("El ID del primer hijo es " + PrimerHijo.getAttribute("id"));
 
-        List<WebElement> lista = driver.findElements(By.xpath("//body/child::div"));
-        WebElement UltimoHijo = lista.get(lista.size()-1);
+        WebElement UltimoHijo = driver.findElement(By.xpath("//body/child::div"));
         System.out.println("El ID del ultimo hijo es " + UltimoHijo.getAttribute("id"));
 
         WebElement CualquierElemento = driver.findElement(By.xpath("//*[@role='navigation']"));
         System.out.println("Cualquier Elemento del rol con atributo  "+ CualquierElemento.getText());
 
         WebElement CualquierAtributo = driver.findElement(By.xpath("//*[contains(@class,'nav')]"));
-            System.out.println("Clase del elemento nav " + CualquierAtributo.getText());
+        System.out.println("Clase del elemento nav " + CualquierAtributo.getText());
 
         WebElement NavInput = driver.findElement(By.xpath("//*[@type='submit' and @class='nav-input']"));
         System.out.println("Cualquier clase y Submit del elemento nav input y atributo type: "+ NavInput.getText());
