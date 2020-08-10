@@ -1,0 +1,33 @@
+package ejercicios.testng;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utils.WebDriverFactory;
+
+import java.util.concurrent.TimeUnit;
+
+public class SeleniumHandsOn2 {
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        
+        driver.get("https://www.google.com/");
+        
+        driver.manage().window().maximize();
+        
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        
+        assert  driver.getCurrentUrl().equals("https://www.google.com/"): "La página mostrada no es la esperada";
+        
+        WebElement searchText = driver.findElement(By.name("q"));
+        
+        searchText.sendKeys("Assertions in Selenium");
+        
+        Thread.sleep(3000);
+        
+        driver.close();
+        
+        driver.quit();
+    }
+}
