@@ -1,0 +1,31 @@
+package ejercicios;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.File;
+
+public class SeleniumExercice1 {
+    public static void main(String[] args) throws InterruptedException {
+    
+        File rootPath=new File ("testngtest/src/test/resources/drivers");
+        
+        File chromeFilePath= new File(rootPath,"chromedriver.exe");
+        
+        System.setProperty("webdriver.chrome.driver", chromeFilePath.getPath());
+        
+        WebDriver driver = new ChromeDriver();
+        
+        driver.get("https://www.google.com/"); //Abrir página google
+        
+        Thread.sleep(5000);
+        
+        System.out.println(driver.getTitle());
+        
+        System.out.println(driver.getPageSource());
+        
+        assert  driver.getCurrentUrl().equals("https://www.google/"): "La página mostrada no es la esperada";
+        
+        driver.close();//Cerrar sesión
+        
+        driver.quit(); //Cerrar proceso
+    }
+}
