@@ -22,10 +22,10 @@ public class XpathExercice3 {
         driver.get("https://www.amazon.com.mx");
 
         WebElement PrimerHijo = driver.findElement(By.xpath("//body/div"));
-        System.out.println("El ID del primer hijo es " + PrimerHijo.getAttribute("id"));
+        System.out.println("El ID del primer hijo es " + PrimerHijo.getText());
 
         WebElement UltimoHijo = driver.findElement(By.xpath("//body/child::div"));
-        System.out.println("El ID del ultimo hijo es " + UltimoHijo.getAttribute("id"));
+        System.out.println("El ID del ultimo hijo es " + UltimoHijo.getText());
 
         WebElement CualquierElemento = driver.findElement(By.xpath("//*[@role='navigation']"));
         System.out.println("Cualquier Elemento del rol con atributo  "+ CualquierElemento.getText());
