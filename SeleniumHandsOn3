@@ -1,0 +1,39 @@
+package ejercicios.testng;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utils.WebDriverFactory;
+
+import java.util.concurrent.TimeUnit;
+
+public class SeleniumHandsOn3 {
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        
+        driver.get("https://www.facebook.com/");
+        
+        driver.manage().window().maximize();
+        
+        WebElement searchEmail = driver.findElement(By.id("email"));
+        
+        searchEmail.sendKeys("email");
+        
+        Thread.sleep(2000);
+        
+        WebElement searchPass = driver.findElement(By.id("pass"));
+        
+        searchPass.sendKeys("pass");
+        
+        WebElement searchButton = driver.findElement(By.id("loginbutton"));
+        
+        searchButton.click();
+        
+        Thread.sleep(8000);
+        
+        driver.close();
+        
+        driver.quit();
+    }
+}
