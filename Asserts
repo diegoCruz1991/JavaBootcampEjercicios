@@ -1,0 +1,67 @@
+package ejercicios.testng;
+
+public class Asserts {
+
+    public static void main(String[] args) {
+
+        String str = "Esto es una cadena";
+        System.out.println("--Cadena Original: --\n" +str);
+        cadenaReversa(str);
+        quitarEspacios(str);
+        cortarCadena(str);
+        contarVocales(str);
+    }
+
+    public static void cadenaReversa(String s) {
+        char[] letras = new char[s.length()];
+        int index = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            letras[index] = s.charAt(i);
+            index++;
+        }
+        String reversa = "";
+        for (int i = 0; i < s.length(); i++) {
+            reversa = reversa + letras[i];
+        }
+        System.out.println("El reverso de la cadena es: " +reversa);
+
+        assert s.toString().equals("222222222222"): "La cadena no es la misma";
+    }
+
+    public static void quitarEspacios(String s){
+        s=s.replaceAll("\\s","");
+        System.out.println("La cadena sin espacios es: "+s);
+
+        assert s.equals("Estoesunacadenauno"): "La cadena sin espacios no es igual";
+    }
+
+    public static void cortarCadena(String s2) {
+        String str = s2;//cadena
+        int len = str.length(); //tamaño de la cadena
+        int n = 2; //divición de la cadena
+        int n1 = len / n; //# de letras que tiene cada cadena
+        String s="";
+        if (len % n == 0) {
+            for (int i = 0; i < n; i++) {
+               s="";
+                for (int j = n1 * i; j < (i + 1) * n1; j++) {
+                    s = s + str.charAt(j);
+                }
+                System.out.println("La cadena "+ (i+1) +" es: " + s);
+                assert s.equals("Hola"): "La primera cadena no coincide";
+            }
+        }
+    }
+    public static void contarVocales(String s){
+        int cont = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'a' || s.charAt(i) == 'A' || s.charAt(i) == 'e' || s.charAt(i) == 'E' ||
+                    s.charAt(i) == 'i' || s.charAt(i) == 'I' || s.charAt(i) == 'o' || s.charAt(i) == 'O' ||
+                    s.charAt(i) == 'u' || s.charAt(i) == 'U') {
+                cont++;
+            }
+        }
+        System.out.println("El numero de vocales son: " + cont);
+        assert cont == 10: "No son 10 vocales";
+    }
+}
