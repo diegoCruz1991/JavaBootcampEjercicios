@@ -1,0 +1,36 @@
+package ejercicios;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utils.WebDriverFactory;
+import java.util.List;
+
+public class LocatorsExercise3 {
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://www.nasa.gov/");
+        driver.manage().window().maximize();
+
+        WebElement missions = driver.findElement(By.partialLinkText("Missions"));
+        System.out.println(missions.getAttribute("href"));
+
+        WebElement nasaTv = driver.findElement(By.partialLinkText("NASA TV"));
+        System.out.println(nasaTv.getAttribute("href"));
+
+        WebElement mars = driver.findElement(By.partialLinkText("Mars"));
+        System.out.println(mars.getAttribute("href"));
+
+        List<WebElement> tagName= driver.findElements(By.tagName("input")); //Por si no hay nada trae una lista vacia
+        if(tagName.isEmpty()){
+            System.out.println("No hay datos");
+        } else{
+            for(int i = 0; i < tagName.size(); i++){
+                System.out.println(tagName.get(i).getAttribute("value"));
+            }
+        }
+        driver.close();
+        driver.quit();
+    }
+}
