@@ -42,13 +42,14 @@ public class TestNGHandsOn3 extends HandsOn3 {
         while(i < total) {
             categories.get(i).click();
             wait.until(ExpectedConditions.visibilityOf
-                    (driver.findElement(By.xpath("//div[@class='row grid']/descendant::a[@class='display-name comname'][1]"))));
+                    (driver.findElement(By.xpath("//div[@class='row grid']/descendant::a[contains(@class, 'display-name')][1]"))));
             WebElement firstAnimal = driver.findElement(By.xpath("//div[@class='row grid']/descendant::a[contains(@class, 'display-name')][1]"));
             System.out.println("Category: " + categories.get(i).getAttribute("title") + " - Animal: " + firstAnimal.getText());
             categories.get(i).click();
             i++;
         }
 
+        //System.out.println(categories.get(i).getAttribute("title"));
         //Assert.assertEquals(i, 10);
     }
 }
