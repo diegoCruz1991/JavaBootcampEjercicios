@@ -1,0 +1,57 @@
+package ejercicios.testng;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utils.WebDriverFactory;
+
+import java.util.concurrent.TimeUnit;
+
+public class XpathExercise3 {
+
+    public static void main(String[] args){
+
+        //Open https://www.amazon.com.mx/
+
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://www.amazon.com.mx/");
+
+        driver.manage().window().maximize();
+        //Implicit Wait
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        // Create XPATH to search this elements and print getText()
+
+        //Select first div child of body element
+        System.out.println("-----------Select first div child of body element-------------");
+        WebElement elementXpath1 = driver.findElement(By.xpath("//body/div[1]"));
+        System.out.println(elementXpath1.getText());
+        System.out.println("----------------------------------------------------------------");
+
+        //Select last div child of body element
+        System.out.println("-----------Select last div child of body element-------------");
+        WebElement elementXpath2 = driver.findElement(By.xpath("//body/div[last()]"));
+        System.out.println(elementXpath2.getText());
+        System.out.println("----------------------------------------------------------------");
+
+        //Select any element with attribute role equal to navigation
+        System.out.println("-----------Select any element with attribute role equal to navigation-------------");
+        WebElement elementXpath3 = driver.findElement(By.xpath("//*[@role='navigation']"));
+        System.out.println(elementXpath3.getText());
+        System.out.println("----------------------------------------------------------------");
+
+        //Select any element that contains nav under class attribute
+        System.out.println("Select any element that contains nav under class attribute");
+        WebElement elementXpath4 = driver.findElement(By.xpath("//*[contains(@class,'nav')]"));
+        System.out.println("----------------------------------------------------------------");
+
+        //Select any element with type attribute equal submit and class attribute equal nav-input
+        System.out.println("-----------Select any element with type attribute equal submit and class attribute equal nav-input-------------");
+        WebElement webElement5 = driver.findElement(By.xpath("//*[@type='submit'][@class='nav-input']"));
+        System.out.println(webElement5.getText());
+        System.out.println("----------------------------------------------------------------");
+
+        driver.close();
+        driver.quit();
+    }
+}
