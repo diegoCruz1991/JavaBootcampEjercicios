@@ -47,8 +47,8 @@ public class XpathExercise3 {
 
         //Select any element with type attribute equal submit and class attribute equal nav-input
         System.out.println("-----------Select any element with type attribute equal submit and class attribute equal nav-input-------------");
-        WebElement webElement5 = driver.findElement(By.xpath("//*[@type='submit'][@class='nav-input']"));
-        System.out.println(webElement5.getText());
+        WebElement elementXpath5 = driver.findElement(By.xpath("//*[@type='submit'][@class='nav-input']"));
+        System.out.println(elementXpath5.getText());
         System.out.println("----------------------------------------------------------------");
 
         driver.close();
