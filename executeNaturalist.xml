@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteNaturalist" verbose="1">
+    <test name="testNaturalist">
+        <classes>
+            <class name="ejercicios.INaturalist"></class>
+        </classes>
+    </test>
+</suite>
